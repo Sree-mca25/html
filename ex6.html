@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Technology Stack</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 5% 10%,
+                    rgba(128, 91, 255, 0.12),
+                    transparent 18%),
+                radial-gradient(circle at 90% 25%,
+                    rgba(94, 156, 255, 0.12),
+                    transparent 18%),
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #f8f5ff,
+                    #f4f7ff
+                );
+
+            color: #18233f;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+
+        /* =========================
+           DECORATIVE BACKGROUND
+        ========================= */
+
+        body::before {
+            content: "";
+            position: fixed;
+
+            width: 180px;
+            height: 180px;
+
+            top: -80px;
+            left: -70px;
+
+            border-radius: 50%;
+
+            background: #eee8ff;
+
+            z-index: -1;
+        }
+
+        body::after {
+            content: "";
+
+            position: fixed;
+
+            width: 120px;
+            height: 120px;
+
+            right: 8%;
+            top: 70px;
+
+            border-radius: 50%;
+
+            background: #f1e8ff;
+
+            z-index: -1;
+        }
+
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 45px 30px 100px;
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        .section {
+            margin-bottom: 55px;
+        }
+
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        .title-box {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 35px;
+
+            margin-bottom: 30px;
+        }
+
+        .line {
+            width: 100px;
+            height: 2px;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                #8b42ff
+            );
+
+            position: relative;
+        }
+
+        .line.right {
+            background: linear-gradient(
+                90deg,
+                #287dff,
+                transparent
+            );
+        }
+
+        .line::after {
+            content: "";
+
+            position: absolute;
+
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #8b42ff;
+
+            right: -3px;
+            top: -3px;
+        }
+
+        .line.right::after {
+            left: -3px;
+            right: auto;
+
+            background: #287dff;
+        }
+
+        h1 {
+            font-size: 48px;
+
+            letter-spacing: 2px;
+
+            font-weight: 800;
+
+            background: linear-gradient(
+                90deg,
+                #7b2cff,
+                #247dff
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 38px;
+
+            max-width: 940px;
+
+            margin: auto;
+        }
+
+        .card {
+            min-height: 300px;
+
+            padding: 28px 22px;
+
+            text-align: center;
+
+            background: rgba(
+                255,
+                255,
+                255,
+                0.92
+            );
+
+            border-radius: 15px;
+
+            border-top: 4px solid #7b35ff;
+
+            box-shadow:
+                0 10px 30px
+                rgba(48, 44, 100, 0.13);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(70, 55, 140, 0.20);
+        }
+
+
+        /* =========================
+           CARD ICON
+        ========================= */
+
+        .icon-box {
+            width: 135px;
+            height: 135px;
+
+            margin: 0 auto 18px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 18px;
+
+            background: #f3f8ff;
+
+            overflow: hidden;
+        }
+
+        .icon-box img {
+            width: 105px;
+            height: 105px;
+
+            object-fit: contain;
+        }
+
+
+        /* =========================
+           CARD TITLE
+        ========================= */
+
+        .card h2 {
+            font-size: 26px;
+
+            margin-bottom: 12px;
+
+            color: #17243f;
+        }
+
+
+        /* =========================
+           CARD DESCRIPTION
+        ========================= */
+
+        .card p {
+            font-size: 15px;
+
+            line-height: 1.5;
+
+            color: #59657d;
+
+            max-width: 230px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           FRONTEND CARDS
+        ========================= */
+
+        .frontend .card {
+            border-top-color: #713bff;
+        }
+
+        .frontend .icon-box {
+            background: #f1f8ff;
+        }
+
+
+        /* =========================
+           BACKEND CARDS
+        ========================= */
+
+        .backend .card {
+            border-top-color: #16cba1;
+        }
+
+        .backend .icon-box {
+            background: #f0faf5;
+        }
+
+
+        /* =========================
+           BACKGROUND DOTS
+        ========================= */
+
+        .dots {
+            position: fixed;
+
+            width: 110px;
+            height: 160px;
+
+            right: 15px;
+            top: 280px;
+
+            background-image:
+                radial-gradient(
+                    #b8c9ff 3px,
+                    transparent 3px
+                );
+
+            background-size: 27px 27px;
+
+            opacity: 0.65;
+
+            z-index: -1;
+        }
+
+        .dots.left {
+            left: 15px;
+            right: auto;
+
+            top: 520px;
+
+            background-image:
+                radial-gradient(
+                    #d1baff 3px,
+                    transparent 3px
+                );
+        }
+
+
+        /* =========================
+           BOTTOM WAVES
+        ========================= */
+
+        .wave {
+            position: fixed;
+
+            bottom: -100px;
+            left: -5%;
+
+            width: 110%;
+
+            height: 190px;
+
+            border-radius: 50% 50% 0 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e7dcff,
+                    #dbe9ff
+                );
+
+            transform: rotate(-3deg);
+
+            z-index: -1;
+        }
+
+        .wave::after {
+            content: "";
+
+            position: absolute;
+
+            width: 100%;
+            height: 130px;
+
+            top: -40px;
+            left: 10%;
+
+            border-radius: 50%;
+
+            background: #f8f6ff;
+
+            opacity: 0.7;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .cards {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .container {
+                padding: 30px 20px 100px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+
+                max-width: 350px;
+            }
+
+            .title-box {
+                gap: 15px;
+            }
+
+            .line {
+                width: 45px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .card {
+                min-height: 290px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Decorative dots -->
+    <div class="dots"></div>
+    <div class="dots left"></div>
+
+
+    <div class="container">
+
+
+        <!-- =========================
+             FRONTEND
+        ========================== -->
+
+        <section class="section frontend">
+
+            <div class="title-box">
+
+                <div class="line"></div>
+
+                <h1>FRONTEND</h1>
+
+                <div class="line right"></div>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- React -->
+
+                <div class="card">
+
+                    <div class="icon-box">
+
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="React"
+                        >
+
+                    </div>
+
+                    <h2>React</h2>
+
+                    <p>
+                        A JavaScript library for building
+                        modern user interfaces.
+                    </p>
+
+                </div>
+
+
+                <!-- HTML -->
+
+                <div class="card">
+
+                    <div class="icon-box">
+
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML5"
+                        >
+
+                    </div>
+
+                    <h2>HTML5</h2>
+
+                    <p>
+                        The standard markup language
+                        for creating web pages.
+                    </p>
+
+                </div>
+
+
+                <!-- CSS -->
+
+                <div class="card">
+
+                    <div class="icon-box">
+
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS3"
+                        >
+
+                    </div>
+
+                    <h2>CSS3</h2>
+
+                    <p>
+                        Style your web pages with
+                        modern CSS techniques.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             BACKEND
+        ========================== -->
+
+        <section class="section backend">
+
+            <div class="title-box">
+
+                <div class="line"></div>
+
+                <h1>BACKEND</h1>
+
+                <div class="line right"></div>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- Node -->
+
+                <div class="card">
+
+                    <div class="icon-box">
+
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js"
+                        >
+
+                    </div>
+
+                    <h2>Node.js</h2>
+
+                    <p>
+                        A JavaScript runtime built on
+                        Chrome's V8 JavaScript engine.
+                    </p>
+
+                </div>
+
+
+                <!-- JavaScript -->
+
+                <div class="card">
+
+                    <div class="icon-box">
+
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript"
+                        >
+
+                    </div>
+
+                    <h2>JavaScript</h2>
+
+                    <p>
+                        The programming language
+                        of the modern web.
+                    </p>
+
+                </div>
+
+
+                <!-- Python -->
+
+                <div class="card">
+
+                    <div class="icon-box">
+
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            alt="Python"
+                        >
+
+                    </div>
+
+                    <h2>Python</h2>
+
+                    <p>
+                        A powerful programming language
+                        widely used for backend development.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- Bottom decorative wave -->
+    <div class="wave"></div>
+
+
+</body>
+</html>
