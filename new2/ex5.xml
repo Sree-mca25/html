@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/css" href="lang.css"?>
+
+<learnhub>
+
+    <header>
+        <logo>
+            <icon>🎓</icon>
+            <name>Learn<span>Hub</span></name>
+        </logo>
+
+        <navigation>
+            <item class="active">⌂ Home</item>
+            <item>◉ Explore</item>
+            <item>☷ Resources</item>
+            <item>ⓘ About</item>
+            <button>Get Started</button>
+        </navigation>
+    </header>
+
+
+    <hero>
+
+        <title>
+            Welcome to <highlight>LearnHub!</highlight>
+        </title>
+
+        <subtitle>
+            Your gateway to mastering technology
+        </subtitle>
+
+        <line></line>
+
+        <stats>
+
+            <stat>
+                <icon>📖</icon>
+                <number>5+</number>
+                <label>Categories</label>
+            </stat>
+
+            <stat>
+                <icon>🎓</icon>
+                <number>50+</number>
+                <label>Technologies</label>
+            </stat>
+
+            <stat>
+                <icon>👥</icon>
+                <number>10K+</number>
+                <label>Learners</label>
+            </stat>
+
+            <stat>
+                <icon>★</icon>
+                <number>100+</number>
+                <label>Resources</label>
+            </stat>
+
+        </stats>
+
+    </hero>
+
+
+    <categories>
+
+        <category class="programming">
+
+            <categoryIcon>&lt;/&gt;</categoryIcon>
+
+            <title>Programming</title>
+
+            <description>
+                Build strong programming foundations.
+                Learn languages and develop problem-solving skills.
+            </description>
+
+            <technologies>
+                <technology>Python</technology>
+                <technology>JavaScript</technology>
+                <technology>Java</technology>
+                <technology>C++</technology>
+            </technologies>
+
+            <explore>Explore →</explore>
+
+        </category>
+
+
+        <category class="datascience">
+
+            <categoryIcon>📈</categoryIcon>
+
+            <title>Data Science</title>
+
+            <description>
+                Analyze and interpret complex data.
+                Use AI and statistics to derive meaningful insights.
+            </description>
+
+            <technologies>
+                <technology>Machine Learning</technology>
+                <technology>Data Visualization</technology>
+                <technology>Deep Learning</technology>
+                <technology>Statistics</technology>
+            </technologies>
+
+            <explore>Explore →</explore>
+
+        </category>
+
+
+        <category class="webdevelopment">
+
+            <categoryIcon>🌐</categoryIcon>
+
+            <title>Web Development</title>
+
+            <description>
+                Create modern and responsive websites.
+                Learn full-stack development from scratch.
+            </description>
+
+            <technologies>
+                <technology>HTML</technology>
+                <technology>CSS</technology>
+                <technology>React</technology>
+                <technology>Node.js</technology>
+                <technology>JavaScript</technology>
+            </technologies>
+
+            <explore>Explore →</explore>
+
+        </category>
+
+
+        <category class="databases">
+
+            <categoryIcon>🗄</categoryIcon>
+
+            <title>Databases</title>
+
+            <description>
+                Manage and query data efficiently using SQL
+                and modern database systems.
+            </description>
+
+            <technologies>
+                <technology>SQL</technology>
+                <technology>MySQL</technology>
+                <technology>Oracle</technology>
+                <technology>MongoDB</technology>
+            </technologies>
+
+            <explore>Explore →</explore>
+
+        </category>
+
+
+        <category class="cybersecurity">
+
+            <categoryIcon>🛡</categoryIcon>
+
+            <title>Cyber Security</title>
+
+            <description>
+                Protect systems and data from attacks.
+                Learn ethical hacking and security best practices.
+            </description>
+
+            <technologies>
+                <technology>Ethical Hacking</technology>
+                <technology>Network</technology>
+                <technology>Linux</technology>
+                <technology>Security</technology>
+            </technologies>
+
+            <explore>Explore →</explore>
+
+        </category>
+
+    </categories>
+
+
+    <footer>
+
+        <footerSection class="brand">
+
+            <logo>
+                <icon>🎓</icon>
+                <name>Learn<span>Hub</span></name>
+            </logo>
+
+            <description>
+                Empowering learners to build the future with technology.
+            </description>
+
+        </footerSection>
+
+
+        <footerSection>
+
+            <heading>Quick Links</heading>
+
+            <link>› Home</link>
+            <link>› Explore</link>
+            <link>› Resources</link>
+            <link>› About</link>
+
+        </footerSection>
+
+
+        <footerSection>
+
+            <heading>Connect With Us</heading>
+
+            <social>
+                <item>f</item>
+                <item>𝕏</item>
+                <item>in</item>
+                <item>●</item>
+            </social>
+
+        </footerSection>
+
+
+        <footerSection class="newsletter">
+
+            <heading>Newsletter</heading>
+
+            <description>
+                Stay updated with the latest resources and tutorials.
+            </description>
+
+            <form>
+                <input placeholder="Enter your email"></input>
+                <button>Subscribe</button>
+            </form>
+
+        </footerSection>
+
+
+        <copyright>
+            © 2025 <highlight>LearnHub</highlight>. All rights reserved.
+        </copyright>
+
+    </footer>
+
+</learnhub>
