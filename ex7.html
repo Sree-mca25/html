@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Login Form Validation</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-init="email='sreevelvizhi28@gmail.com'; password='1'">
+
+    <h2>Login Form Validation</h2>
+
+    <form name="loginForm" novalidate>
+
+        <!-- Email Field -->
+        Email:
+        <input
+            type="email"
+            name="email"
+            ng-model="email"
+            required
+        />
+        <br>
+
+        <span ng-show="loginForm.email.$touched && loginForm.email.$error.required">
+            * Email is required
+        </span>
+
+        <br>
+
+        <span ng-show="loginForm.email.$error.email">
+            * Invalid email format
+        </span>
+
+        <br><br>
+
+
+        <!-- Password Field -->
+        Password:
+        <input
+            type="password"
+            name="password"
+            ng-model="password"
+            required
+            ng-minlength="6"
+        />
+        <br>
+
+        <span ng-show="loginForm.password.$touched && loginForm.password.$error.required">
+            * Password is required
+        </span>
+
+        <br>
+
+        <span ng-show="loginForm.password.$error.minlength">
+            * Minimum 6 characters required
+        </span>
+
+        <br><br>
+
+
+        <!-- Success Message -->
+        <span ng-show="loginForm.$valid">
+            All fields look good!
+        </span>
+
+        <br><br>
+
+        <!-- Login Button -->
+        <button
+            type="submit"
+            ng-disabled="loginForm.$invalid">
+            Login
+        </button>
+
+    </form>
+
+</body>
+</html>
