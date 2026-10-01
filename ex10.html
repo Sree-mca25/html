@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse & Form Events</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        #box {
+            width: 200px;
+            height: 100px;
+            background: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Mouse & Form Events</h3>
+
+    <div id="box">Hover / Click Me</div>
+
+    <form id="form">
+        <input id="name" placeholder="Enter name" required>
+        <button>Submit</button>
+    </form>
+
+    <p id="msg"></p>
+
+    <script>
+        const box = document.getElementById("box");
+
+        box.onmouseover = () => box.style.background = "lightgreen";
+        box.onmouseout = () => box.style.background = "lightblue";
+        box.onclick = () => box.style.background = "orange";
+
+        document.getElementById("form").onsubmit = e => {
+            e.preventDefault();
+
+            document.getElementById("msg").textContent =
+                `Hello, ${document.getElementById("name").value}!`;
+
+            e.target.reset();
+        };
+    </script>
+
+</body>
+</html>
